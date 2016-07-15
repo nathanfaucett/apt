@@ -1,4 +1,4 @@
-var values = require("values"),
+var values = require("@nathanfaucett/values"),
     apt = require("..");
 
 

@@ -1,6 +1,6 @@
-var has = require("has"),
-    isFunction = require("is_function"),
-    EventEmitter = require("event_emitter");
+var has = require("@nathanfaucett/has"),
+    isFunction = require("@nathanfaucett/is_function"),
+    EventEmitter = require("@nathanfaucett/event_emitter");
 
 
 var StoreManagerPrototype;

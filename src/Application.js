@@ -1,4 +1,4 @@
-var EventEmitter = require("event_emitter"),
+var EventEmitter = require("@nathanfaucett/event_emitter"),
     Dispatcher = require("./Dispatcher"),
     StoreManager = require("./StoreManager");
 

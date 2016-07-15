@@ -1,8 +1,8 @@
-var inherits = require("inherits"),
-    isString = require("is_string"),
-    isArray = require("is_array"),
-    arrayForEach = require("array-for_each"),
-    EventEmitter = require("event_emitter");
+var inherits = require("@nathanfaucett/inherits"),
+    isString = require("@nathanfaucett/is_string"),
+    isArray = require("@nathanfaucett/is_array"),
+    arrayForEach = require("@nathanfaucett/array-for_each"),
+    EventEmitter = require("@nathanfaucett/event_emitter");
 
 
 var EVENT_CHANGE = "change",
