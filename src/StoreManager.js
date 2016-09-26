@@ -25,7 +25,7 @@ StoreManagerPrototype.register = function(store) {
         storeName = store.storeName;
 
     if (has(stores, storeName)) {
-        throw new Error("StoreManager register(store) store with " + storeName + " already exists");
+        throw new Error("StoreManager register(store) store named " + storeName + " already exists");
     } else {
         stores[storeName] = store;
     }
@@ -33,12 +33,29 @@ StoreManagerPrototype.register = function(store) {
     store.application = application;
     if (!isFunction(store.dispatchHandler)) {
         throw new Error(
-            "StoreManager register(store) store with " + storeName +
+            "StoreManager register(store) store named " + storeName +
             " dispatchHandler is not defined make sure you called Store.call(this) in constructor " +
             " or define it on the store, dispatchHandler(action: Object)"
         );
     }
     application.dispatcher.register(store.dispatchHandler);
+
+    return this;
+};
+
+StoreManagerPrototype.unregister = function(store) {
+    var application = this.application,
+        stores = this.__stores,
+        storeName = store.storeName;
+
+    if (has(stores, storeName)) {
+        delete stores[storeName];
+    } else {
+        throw new Error("StoreManager unregister(store) store named " + storeName + " does not exists");
+    }
+
+    store.application = null;
+    application.dispatcher.unregister(store.dispatchHandler);
 
     return this;
 };

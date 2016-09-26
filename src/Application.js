@@ -23,6 +23,10 @@ ApplicationPrototype.registerStore = function(store) {
     this.storeManager.register(store);
 };
 
+ApplicationPrototype.unregisterStore = function(store) {
+    this.storeManager.unregister(store);
+};
+
 ApplicationPrototype.dispatchAction = function(action) {
     this.dispatcher.dispatch(action);
 };
