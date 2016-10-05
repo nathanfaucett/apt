@@ -1,6 +1,6 @@
 {
   "name": "@nathanfaucett/apt",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "apt is the application architecture that based on facebook's apt uses for building client-side web applications.",
   "repository": {
     "type": "git",
@@ -32,9 +32,9 @@
   },
   "dependencies": {
     "@nathanfaucett/array-for_each": "^0.0.1",
-    "@nathanfaucett/event_emitter": "^0.0.2",
-    "@nathanfaucett/has": "^0.0.1",
-    "@nathanfaucett/inherits": "^0.0.2",
+    "@nathanfaucett/event_emitter": "^0.0.3",
+    "@nathanfaucett/has": "^0.0.2",
+    "@nathanfaucett/inherits": "^0.0.3",
     "@nathanfaucett/is_array": "^0.0.1",
     "@nathanfaucett/is_function": "^0.0.1",
     "@nathanfaucett/is_string": "^0.0.1"
