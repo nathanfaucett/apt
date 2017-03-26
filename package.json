@@ -1,6 +1,6 @@
 {
   "name": "@nathanfaucett/apt",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "apt is the application architecture that based on facebook's apt uses for building client-side web applications.",
   "repository": {
     "type": "git",
@@ -28,7 +28,7 @@
     "tap-spec": "^4.1.1",
     "tape": "^4.6.0",
     "zuul": "^3.11.1",
-    "@nathanfaucett/values": "^0.0.1"
+    "@nathanfaucett/values": "^0.0.2"
   },
   "dependencies": {
     "@nathanfaucett/array-for_each": "^0.0.1",

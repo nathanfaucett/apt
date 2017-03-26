@@ -13,7 +13,7 @@ function StoreManager(application) {
 
     EventEmitter.call(this, -1);
 
-    this.__stores = {};
+    this._stores = {};
     this.application = application;
 }
 EventEmitter.extend(StoreManager);
@@ -21,7 +21,7 @@ StoreManagerPrototype = StoreManager.prototype;
 
 StoreManagerPrototype.register = function(store) {
     var application = this.application,
-        stores = this.__stores,
+        stores = this._stores,
         storeName = store.storeName;
 
     if (has(stores, storeName)) {
@@ -45,7 +45,7 @@ StoreManagerPrototype.register = function(store) {
 
 StoreManagerPrototype.unregister = function(store) {
     var application = this.application,
-        stores = this.__stores,
+        stores = this._stores,
         storeName = store.storeName;
 
     if (has(stores, storeName)) {
@@ -62,7 +62,7 @@ StoreManagerPrototype.unregister = function(store) {
 
 StoreManagerPrototype.toJSON = function() {
     var localHas = has,
-        stores = this.__stores,
+        stores = this._stores,
         json = {},
         key;
 
@@ -77,11 +77,11 @@ StoreManagerPrototype.toJSON = function() {
 
 StoreManagerPrototype.fromJSON = function(json) {
     var localHas = has,
-        stores = this.__stores,
+        stores = this._stores,
         key;
 
     for (key in json) {
-        if (localHas(json, key)) {
+        if (localHas(json, key) && localHas(stores, key)) {
             stores[key].fromJSON(json[key]);
         }
     }
